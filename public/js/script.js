@@ -16,8 +16,8 @@ $(document).ready(function(){
 				console.log(msg.responseText);
 			}
 		})
-		$('#results').empty()
-		$('#results').append('<div class="result row"><h1>This is a row</h1></div>');
+		$('form').append('<br/><br/><img src="public/images/ajax-loader.gif"/>');
+		$('#results').append('<div class="result row"><div class="span4"></div></div>');
 	});
 
 });
