@@ -20,7 +20,7 @@ $(document).ready(function(){
 		$('#results').append('<div class="result row"><div class="span4"></div></div>');
 		$('#results').empty()
 		var imgSrc = $("#source").val();
-		$('#results').append('<div class="result row"><img src="public/images/'+imgSrc+'.jpg"></div>');
+		$('#results').append('<div class="result row"><img style="height:120px" src="public/images/'+imgSrc+'.jpg"></div>');
 	});
 
 });
