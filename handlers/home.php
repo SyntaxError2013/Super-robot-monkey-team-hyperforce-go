@@ -37,11 +37,18 @@ class HomeHandler{
 				}
 			}
 		}
-		echo 10*$total/$i + 5;
-		echo "\n";
-		echo $positive;
-		echo "\n";
-		echo $negative;
+		// echo 10*$total/$i + 5;
+		// echo "\n";
+		// echo $positive;
+		// echo "\n";
+		// echo $negative;
+
+		if((($negative+1)/($positive+1)) > 0.5){
+			echo (10*$total + 5 - 2*($negative+1)/($positve+1)
+		}
+		else{
+			echo (10*$total + 5 + 2*($negative+1)/($positve+1)
+		}
 
 	}
 }
