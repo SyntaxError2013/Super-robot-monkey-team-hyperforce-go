@@ -16,7 +16,15 @@ $(document).ready(function(){
 				console.log(msg.responseText);
 				var score = msg.responseText;
 				score = (Math.round(parseFloat(score)*10))/10;
-				$("div.result").append('<span><h1>'+score+'</h1></span>');
+				if(score > 8) 
+					rating = "Extremely positive";
+				else if(score > 6)
+					rating = "Fairly positive";
+				else if(score > 4)
+					rating = "Mixed";
+				else 
+					rating = "Negative";
+				$("div.result").append('<span><h1>'+rating+':'+score+'</h1></span>');
 				$("#ajax-loader").remove();
 			}
 		})
