@@ -5,7 +5,7 @@ $articleSources = array("toi"=>array("base"=>"http://articles.timesofindia.india
 										"search"=>"http://www.indianexpress.com/topic/")
 						);
 
-$apiKey = "AIzaSyC-CRDiAPdXEBHgvM2YF-x6manmYk9H6D4";
+$apiKey = "AIzaSyBmbBwn6BqrVeXqDG-cbKMQk5RQWvbc0bc";
 $ieSearchID = "010961665768017960356:_zeideyipb8";
 $toiSearchID = "010961665768017960356:tyb6vy7xp5e";
 $hinduSearchID = "010961665768017960356:trzulzp-s_4";
