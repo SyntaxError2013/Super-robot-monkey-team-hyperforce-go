@@ -1,21 +1,22 @@
 $(document).ready(function(){
 	
-	$('#sub').click(function(){
+	$('#sub2').click(function(){
 		event.preventDefault();
-		var source = $('#source').val();
-		var keystring = $('#keystring').val();		
+		var keystring = $('#keystring2').val();		
 		var data = {
-			source:source,
 			keystring:keystring
 		}
 		$.ajax({
-			type:'post',
-			url:"",
+			type:'get',
+			url:"csearch/"+keystring,
 			data:data,
 			complete:function(msg){
 				console.log(msg.responseText);
 				var score = msg.responseText;
+				score = score*50 +5;
 				score = (Math.round(parseFloat(score)*10))/10;
+
+				rating = '';
 				if(score > 8) 
 					rating = "Extremely positive";
 				else if(score > 6)

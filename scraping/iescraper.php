@@ -27,7 +27,8 @@ class IeScraper {
 		if(!$url)
 			return false;
 		$html = file_get_html($url);
-		$result["title"] = $html->find('div#ie2013-content h1', 0)->innertext;
+		if($res = $html->find('div#ie2013-content h1', 0))
+			$result["title"] = $res->innertext;
 		$result["content"] = "";
 		foreach ($html->find('div.ie2013-contentstory p') as $key => $value)
 		{
