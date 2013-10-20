@@ -18,6 +18,9 @@ $(document).ready(function(){
 		})
 		$('form').append('<br/><br/><img src="public/images/ajax-loader.gif"/>');
 		$('#results').append('<div class="result row"><div class="span4"></div></div>');
+		$('#results').empty()
+		var imgSrc = $("#source").val();
+		$('#results').append('<div class="result row"><img src="public/images/'+imgSrc+'.jpg"></div>');
 	});
 
 });
