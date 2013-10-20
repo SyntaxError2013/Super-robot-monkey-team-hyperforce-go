@@ -63,7 +63,7 @@ class IeScraper {
 		$comments = array();
 		$threadData = json_decode($html->find('script#disqus-threadData', 0)->innertext, 1);
 		foreach ($threadData["response"]["posts"] as $key => $value) {
-			$comments[] = $value["raw_message"];
+			$comments[] = htmlspecialchars_decode($value["raw_message"]);
 		}
 
 		// echo "\nGot article content for $url\n";

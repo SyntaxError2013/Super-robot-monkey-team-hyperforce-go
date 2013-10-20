@@ -34,7 +34,7 @@ class HinduScraper {
 
 		$result["comments"] = array();
 		foreach ($html->find('div#comment-section h4') as $key => $value)
-			$result["comments"][] = $value->innertext;
+			$result["comments"][] = htmlspecialchars_decode($value->innertext);
 	    
 		// echo "\nGot article content for $url\n";
 		

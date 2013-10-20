@@ -39,7 +39,7 @@ function getDetailsBySource($source,$keyword)
 			break;
 		$details[$index] = $scraper->getArticleContent($link);
 		if(!isset($details[$index]["comments"]))
-			$details[$index]["comments"] = htmlspecialchars_decode($scraper->getComments($details[$index]["commentUrl"]));
+			$details[$index]["comments"] = $scraper->getComments($details[$index]["commentUrl"]);
 
 	}
 	return $details;

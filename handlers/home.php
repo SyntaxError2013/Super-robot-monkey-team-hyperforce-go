@@ -12,9 +12,9 @@ class HomeHandler{
 		$source = $_POST['source'];
 		$keystring = $_POST['keystring'];
 		$details = getDetailsBySource($source,$keystring);
-		// echo json_encode($details[0]["comments"]);
+		echo json_encode($details);
 		foreach ($details as $key => $article) {
-			$scores[$key] = apiCall($article["comments"]);
+			$scores[$key] = apiCall($article["comments"], $keystring);
 		}
 		echo json_encode($scores);
 

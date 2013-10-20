@@ -55,7 +55,7 @@ class ToiScraper {
 		foreach ($html->find('div.cmtBox div div.box') as $key => $value) {
 			$ele = $value->last_child()->first_child()->first_child();
 			if($ele->tag == "span")
-				$comments[] = $ele->innertext;
+				$comments[] = htmlspecialchars_decode($ele->innertext);
 		}
 
 		// echo "\nGot article comments for $url\n";
