@@ -6,8 +6,10 @@ function apiCall($comments, $keyword)
 	global $repustateEndPoint;
 	$command = "curl -d topics=$keyword'";
 	$text = "";
+	$c = 0;
 	foreach ($comments as $key => $comment){
-		// $key = $key+1;
+		if($c++ > 5) //To avoid articles with large number of comments to eat up api limits
+			break;
 		$comment = str_replace("'", '', $comment);
 		$text .= "text$key=$comment&"; 
 	}
