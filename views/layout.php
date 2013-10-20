@@ -30,7 +30,7 @@
 				</div>
 			</div>
 		</header>
-		<div id="results">
+		<div id="results" style="text-align:center">
 		</div>
 	</body>
 </html>

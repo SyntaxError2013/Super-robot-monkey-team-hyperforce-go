@@ -18,7 +18,7 @@ class HomeHandler{
 		}
 		//echo(json_encode($scores));
 		
-		$i = 0;
+		$i = 1;
 		$total = 0;
 		$positive = 0;
 		$negative = 0;
@@ -42,12 +42,13 @@ class HomeHandler{
 		// echo $positive;
 		// echo "\n";
 		// echo $negative;
+		// echo "\n";
 
 		if((($negative+1)/($positive+1)) > 0.5){
-			echo (10*$total + 5 - 2*($negative+1)/($positve+1)
+			echo (10*$total/$i + 5 - ($negative+1)/($positive+1));
 		}
 		else{
-			echo (10*$total + 5 + 2*($negative+1)/($positve+1)
+			echo (10*$total/$i + 5 + ($negative+1)/($positive+1));
 		}
 
 	}
